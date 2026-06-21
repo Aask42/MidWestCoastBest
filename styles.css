@@ -157,6 +157,22 @@ body {
 .dj--host { border-color: var(--cyan); box-shadow: 0 0 14px rgba(0,240,255,.25); }
 .dj--host h3 { color: var(--cyan); text-shadow: var(--glow-c); }
 
+/* ---------- hosts ---------- */
+.hosts { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+.host { display: flex; gap: 1.1rem; align-items: stretch; background: var(--panel); border: 1px solid var(--cyan); box-shadow: 0 0 14px rgba(0,240,255,.18); padding: 1.1rem; }
+.host--feature { border-color: var(--magenta); box-shadow: 0 0 14px rgba(255,45,149,.2); }
+.host__art { flex: 0 0 84px; align-self: stretch; display: grid; place-items: end center; overflow: hidden;
+  background: repeating-linear-gradient(45deg, rgba(0,240,255,.10) 0 10px, transparent 10px 20px), linear-gradient(160deg, var(--bg-2), #1a0f2e);
+  border: 1px solid var(--line); }
+.host--feature .host__art { background: repeating-linear-gradient(45deg, rgba(255,45,149,.10) 0 10px, transparent 10px 20px), linear-gradient(160deg, var(--bg-2), #1a0f2e); }
+.host__art svg { width: 80%; height: 90%; align-self: end; filter: drop-shadow(0 0 6px rgba(0,240,255,.35)); }
+.host__meta { display: flex; flex-direction: column; justify-content: center; }
+.host__meta h3 { font-family: var(--display); margin: .35rem 0 .4rem; font-size: 1.25rem; color: var(--cyan); text-shadow: var(--glow-c); }
+.host--feature .host__meta h3 { color: var(--magenta); text-shadow: var(--glow-m); }
+.host__meta p { margin: 0; color: var(--text); font-size: .92rem; }
+.host__badge { align-self: flex-start; background: var(--cyan); color: #04101a; font-size: .6rem; letter-spacing: .14em; padding: .15rem .55rem; text-transform: uppercase; box-shadow: var(--glow-c); }
+.host--feature .host__badge { background: var(--magenta); color: #0a0610; box-shadow: var(--glow-m); }
+
 /* ---------- devices ---------- */
 .device-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .6rem; margin: 0 0 1.6rem; }
 .device-list li { border: 1px solid var(--line); padding: .35rem .8rem; color: var(--muted); font-size: .9rem; }
