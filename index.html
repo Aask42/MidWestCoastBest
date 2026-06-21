@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIDWESTCOAST.BEST // Pre-DEF CON Firmware Bonanza</title>
+  <meta name="description" content="The Midwest meets the West Coast for a pre-DEF CON IoT firmware-dumping bonanza. Booze, live music, video game contests, and suspicious little devices that should not have cloud credentials in them." />
+
+  <!-- Open Graph / social cards -->
+  <meta property="og:title" content="MIDWESTCOAST.BEST // Pre-DEF CON Firmware Bonanza" />
+  <meta property="og:description" content="Unwind before unloading. Drink before drinking. Hack before hacking. A pre-DEF CON IoT firmware-dumping party." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://midwestcoast.best" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2307060d'/%3E%3Ctext x='16' y='23' font-family='monospace' font-size='22' font-weight='bold' text-anchor='middle' fill='%23ff2d95'%3EM%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- DJ silhouette sprite (placeholder art; swap for generated portraits later) -->
+  <svg width="0" height="0" aria-hidden="true" style="position:absolute">
+    <defs>
+      <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#00f0ff" />
+        <stop offset="1" stop-color="#ff2d95" />
+      </linearGradient>
+      <symbol id="dj-solo" viewBox="0 0 100 120">
+        <path fill="url(#neon)" d="M18 120c0-30 14-40 32-40s32 10 32 40z" />
+        <circle cx="50" cy="46" r="21" fill="url(#neon)" />
+        <path fill="none" stroke="#07060d" stroke-width="5" d="M27 46a23 23 0 0 1 46 0" />
+        <rect x="22" y="44" width="9" height="18" rx="4" fill="#07060d" />
+        <rect x="69" y="44" width="9" height="18" rx="4" fill="#07060d" />
+      </symbol>
+      <symbol id="dj-couple" viewBox="0 0 100 120">
+        <path fill="url(#neon)" d="M8 120c0-24 11-32 26-32s26 8 26 32z" />
+        <circle cx="34" cy="50" r="16" fill="url(#neon)" />
+        <path fill="url(#neon)" d="M44 120c0-24 11-32 26-32s26 8 26 32z" />
+        <circle cx="68" cy="50" r="16" fill="url(#neon)" />
+      </symbol>
+      <symbol id="dj-mystery" viewBox="0 0 100 120">
+        <path fill="url(#neon)" d="M50 18C28 18 22 50 22 78v42h56V78c0-28-6-60-28-60z" />
+        <path fill="#07060d" d="M50 30c-14 0-18 24-18 44v46h36V74c0-20-4-44-18-44z" />
+        <text x="50" y="92" text-anchor="middle" font-family="Orbitron, monospace" font-size="40" font-weight="900" fill="#ff2d95">?</text>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <nav class="nav">
+      <span class="nav__logo">~/midwestcoast<span class="cursor">_</span></span>
+      <ul class="nav__links">
+        <li><a href="#vibe">vibe</a></li>
+        <li><a href="#lineup">lineup</a></li>
+        <li><a href="#prep">prep</a></li>
+        <li><a href="#scoring">scoring</a></li>
+        <li><a href="#faq">faq</a></li>
+        <li><a href="#terminal">_</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero__inner">
+      <p class="hero__kicker">TUE AUG 4, 2026 &middot; BEFORE DEF CON 34 &middot; LAS VEGAS</p>
+      <h1 class="glitch" data-text="MIDWESTCOAST">MIDWESTCOAST</h1>
+      <p class="hero__sub">&#9617;&#9618;&#9619; PRE-DEF CON FIRMWARE BONANZA &#9619;&#9618;&#9617;</p>
+
+      <p class="hero__pitch">
+        Unwind before unloading. Drink before drinking.<br />
+        Hack before hacking. Win before DEF CON even starts.
+      </p>
+
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="https://partiful.com/e/czKYLqWMMKmPsYjMverL?c=wDvk6wEt" data-rsvp>[ RSVP ]</a>
+        <a class="btn btn--ghost" href="#devices">[ BRING_A_DEVICE ]</a>
+      </div>
+
+      <div class="countdown" id="countdown" aria-label="time until doors">
+        <div class="countdown__unit"><span data-cd="days">--</span><label>days</label></div>
+        <div class="countdown__sep">:</div>
+        <div class="countdown__unit"><span data-cd="hours">--</span><label>hrs</label></div>
+        <div class="countdown__sep">:</div>
+        <div class="countdown__unit"><span data-cd="mins">--</span><label>min</label></div>
+        <div class="countdown__sep">:</div>
+        <div class="countdown__unit"><span data-cd="secs">--</span><label>sec</label></div>
+      </div>
+      <p class="countdown__caption">// until doors &mdash; <span class="neon-cyan">uptime to chaos</span> <span class="countdown__tbd">(start time TBD)</span></p>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== THE VIBE ===================== -->
+    <section id="vibe" class="section">
+      <h2 class="section__title">// the_vibe</h2>
+      <div class="prose">
+        <p>
+          Aask is bringing the <strong>Midwest hacker scene</strong> and the
+          <strong>West Coast hacker scene</strong> together for a pre-con IoT
+          firmware-dumping bonanza &mdash; with booze, live music, video game
+          contests, and suspicious little devices that absolutely should not
+          have cloud credentials in them.
+        </p>
+        <p>
+          Not hacking? <strong>Still come.</strong> We&rsquo;ll have 3+ live
+          musicians, including main-stage DEF CON DJs, plus video game contests,
+          drinks, games, and plenty of &ldquo;drink all the booze, hack all the
+          things&rdquo; vibes while we wait for the last device to fall.
+        </p>
+        <p class="prose__feature">Now featuring <span class="neon-cyan">CantBeABird</span>.</p>
+      </div>
+    </section>
+
+    <!-- ===================== PRIZE ===================== -->
+    <section class="section prize">
+      <div class="prize__box">
+        <p class="prize__label">TOP HACKERS CAN WIN</p>
+        <p class="prize__amount">100 GOLD COINS<span class="prize__star">*</span></p>
+        <p class="prize__fine">*Not real gold. Obviously.</p>
+      </div>
+    </section>
+
+    <!-- ===================== LINEUP ===================== -->
+    <section id="lineup" class="section">
+      <h2 class="section__title">// the_lineup</h2>
+      <p class="section__lede">3+ live musicians. Main-stage DEF CON DJs. One mystery slot.</p>
+      <div class="lineup">
+        <article class="dj dj--host"><div class="dj__art"><svg viewBox="0 0 100 120"><use href="#dj-solo" /></svg></div><span class="dj__badge dj__badge--host">your host</span><h3>Aask</h3><p>midwest &times; west coast</p></article>
+        <article class="dj dj--feature"><div class="dj__art"><svg viewBox="0 0 100 120"><use href="#dj-solo" /></svg></div><span class="dj__badge">featuring</span><h3>CantBeABird</h3><p>hosting &middot; not spinning</p></article>
+        <article class="dj"><div class="dj__art"><svg viewBox="0 0 100 120"><use href="#dj-couple" /></svg></div><h3>TBA</h3><p>main stage</p></article>
+        <article class="dj"><div class="dj__art"><svg viewBox="0 0 100 120"><use href="#dj-solo" /></svg></div><h3>TBA</h3><p>live set</p></article>
+        <article class="dj dj--mystery"><div class="dj__art"><svg viewBox="0 0 100 120"><use href="#dj-mystery" /></svg></div><h3>???</h3><p>mystery slot</p></article>
+      </div>
+      <p class="section__note">Final lineup &amp; portraits incoming. Guest list expands as RSVPs come in.</p>
+    </section>
+
+    <!-- ===================== PREP ===================== -->
+    <section id="prep" class="section">
+      <h2 class="section__title">// prep_your_rig</h2>
+      <p class="section__lede">Show up ready to dump. A little prep = a lot more points.</p>
+      <div class="prep">
+        <div class="prep__col">
+          <h3 class="prep__h">$ pack</h3>
+          <ul class="prep__list">
+            <li>Laptop + charger (Linux/WSL/macOS &mdash; you&rsquo;ll want a real shell)</li>
+            <li>USB-TTL / FT232 serial adapter + jumper wires</li>
+            <li>A cheap SOIC-8 clip + CH341A flasher (for SPI flash dumps)</li>
+            <li>Multimeter (find UART, don&rsquo;t fry the board)</li>
+            <li>The cursed device itself. And a backup cursed device.</li>
+            <li>Power strip / USB hub &mdash; outlets are always scarce</li>
+          </ul>
+        </div>
+        <div class="prep__col">
+          <h3 class="prep__h">$ apt install</h3>
+          <ul class="prep__list prep__list--code">
+            <li>binwalk</li>
+            <li>flashrom</li>
+            <li>minicom / picocom / screen</li>
+            <li>sigrok + pulseview (logic analyzer)</li>
+            <li>ghidra / cutter</li>
+            <li>firmware-mod-kit, sasquatch, jefferson</li>
+          </ul>
+        </div>
+      </div>
+      <p class="ethics">
+        <span class="ethics__tag">[ rules_of_engagement ]</span>
+        Anything on the table is <strong>fair game</strong> &mdash; that&rsquo;s the whole point. Drop a device
+        on the pile and it&rsquo;s open season: <strong>bringing it is your consent</strong> to watch it get dumped,
+        and you rack up points cracking everyone else&rsquo;s, too. <strong>Off-limits:</strong> the venue&rsquo;s network,
+        people&rsquo;s personal phones/laptops, and anything you didn&rsquo;t bring to the party. Findings get
+        disclosed responsibly. Hack the things on the table; don&rsquo;t be a felon.
+      </p>
+    </section>
+
+    <!-- ===================== DEVICES ===================== -->
+    <section id="devices" class="section devices">
+      <h2 class="section__title">// bring_a_device</h2>
+      <div class="prose">
+        <p>
+          Bring the weird IoT thing you bought, found, forgot about, or
+          &ldquo;definitely meant to look at later.&rdquo;
+        </p>
+        <ul class="device-list">
+          <li>routers</li><li>cameras</li><li>smart plugs</li>
+          <li>mystery boards</li><li>cursed cloud trash</li>
+          <li>bad ideas from Amazon</li><li>anything with firmware and regrets</li>
+        </ul>
+        <p class="prose__feature">If there&rsquo;s no GitHub repo to save you, <span class="neon-magenta">even better.</span></p>
+      </div>
+    </section>
+
+    <!-- ===================== SCORING ===================== -->
+    <section id="scoring" class="section">
+      <h2 class="section__title">// scoring</h2>
+      <p class="section__lede">Dump your own. Dump the device next to you. Points either way, for&hellip;</p>
+      <div class="scoring">
+        <span class="chip">uniqueness</span>
+        <span class="chip">impact</span>
+        <span class="chip">keys</span>
+        <span class="chip">firmware dumps</span>
+        <span class="chip">weird services</span>
+        <span class="chip">cursed findings</span>
+        <span class="chip">&ldquo;wait, what the f*ck?&rdquo; count</span>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section id="faq" class="section">
+      <h2 class="section__title">// faq</h2>
+      <div class="faq">
+        <details class="faq__item">
+          <summary>I&rsquo;m not a hacker. Can I still come?</summary>
+          <p>Yes. Genuinely. There&rsquo;s live music, video game contests, drinks, and games.
+          Come for the vibes, stay for the &ldquo;wait, what the f*ck?&rdquo; moments.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Why is it approval-only?</summary>
+          <p>We&rsquo;re figuring out capacity for the space. RSVP early &mdash; the guest list
+          expands as we lock down the venue.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Where is it?</summary>
+          <p>Las Vegas, location TBD. Approved guests get the address before the night. It&rsquo;s the
+          Tuesday before DEF CON 34, so: in town, close to the action.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Do I have to bring a device?</summary>
+          <p>No, but you can&rsquo;t win the <span class="neon-magenta">100 gold coins*</span> without one.
+          Bring something with firmware and regrets. See <a href="#prep">prep_your_rig</a>.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Is the gold real?</summary>
+          <p>No. Obviously. <span class="prize__star">*</span>Not real gold.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===================== TERMINAL ===================== -->
+    <section id="terminal" class="section">
+      <h2 class="section__title">// shell</h2>
+      <p class="section__lede">You&rsquo;re among hackers. Poke around. Try <code>help</code>.</p>
+      <div class="term" id="term" role="region" aria-label="interactive terminal">
+        <div class="term__bar"><span></span><span></span><span></span> guest@midwestcoast:~</div>
+        <div class="term__body" id="term-body" tabindex="0">
+          <div class="term__line">midwestcoast.best shell v1.0 &mdash; type <span class="neon-cyan">help</span> and hit enter</div>
+        </div>
+        <div class="term__prompt">
+          <span class="term__ps1">guest@midwestcoast:~$</span>
+          <input id="term-input" class="term__input" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="terminal command input" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RSVP ===================== -->
+    <section id="rsvp" class="section rsvp">
+      <h2 class="section__title">// rsvp</h2>
+      <p class="section__lede">
+        Approval-only at first while we figure out capacity. Location TBD.
+      </p>
+      <a class="btn btn--primary btn--xl" href="https://partiful.com/e/czKYLqWMMKmPsYjMverL?c=wDvk6wEt" data-rsvp>[ RSVP ON PARTIFUL ]</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>midwestcoast.best &middot; pre-con &middot; aug 2026</p>
+    <p class="footer__fine">*Still not real gold. Drink responsibly. Hack ethically.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
