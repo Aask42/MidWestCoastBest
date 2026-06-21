@@ -242,14 +242,15 @@
     <!-- ===================== TERMINAL ===================== -->
     <section id="terminal" class="section">
       <h2 class="section__title">// shell</h2>
-      <p class="section__lede">You&rsquo;re among hackers. Poke around. Try <code>help</code>.</p>
+      <p class="section__lede">You&rsquo;re among hackers. Poke around. <code>help</code> to start &mdash;
+      or run <code>adventure</code> and hack your way through DEF CON. There&rsquo;s a flag in there. 🚩</p>
       <div class="term" id="term" role="region" aria-label="interactive terminal">
-        <div class="term__bar"><span></span><span></span><span></span> guest@midwestcoast:~</div>
+        <div class="term__bar"><span></span><span></span><span></span> guest@defcon: ~</div>
         <div class="term__body" id="term-body" tabindex="0">
-          <div class="term__line">midwestcoast.best shell v1.0 &mdash; type <span class="neon-cyan">help</span> and hit enter</div>
+          <div class="term__line">midwestcoast.best shell v2.0 &mdash; type <span class="neon-cyan">help</span>, or <span class="neon-magenta">adventure</span> to play.</div>
         </div>
         <div class="term__prompt">
-          <span class="term__ps1">guest@midwestcoast:~$</span>
+          <span class="term__ps1" id="term-ps1">guest@defcon:~$</span>
           <input id="term-input" class="term__input" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="terminal command input" />
         </div>
       </div>
